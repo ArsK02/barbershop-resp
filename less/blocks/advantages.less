@@ -1,0 +1,241 @@
+.advantages {
+    position: relative;
+
+    height: 399px;
+
+    background-color: #f8f5f2;
+
+    &::after {
+        content: "";
+
+        display: block;
+
+        position: absolute;
+
+        height: 35px;
+        width: 100%;
+
+        background: url("../img/corner-dark.svg") no-repeat; 
+        transform: rotate(180deg);
+    }
+}
+
+.advantages__wrapper {
+    margin-bottom: -1px;
+}
+
+.slider {
+    position: relative;
+}
+
+.advantages__list {
+    height: 365px;
+    width: 100%;
+    background-color: #242424;
+}
+
+.slider__item {
+    display: block;
+
+    position: absolute;
+
+    box-sizing: border-box;
+}
+
+.advantages__item {
+    width: auto;
+    height: 365px;
+
+    padding-top: 170px;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    text-align: center;
+
+    background: no-repeat 50% 15%;
+    background-size: 95px 94px;
+}
+
+.advantages__item--fast {
+    display: none;
+
+    background-image: url("../img/advantage-1-illustration.svg");
+}
+
+.advantages__item--cool {
+    display: none;
+
+    background-image: url("../img/advantage-2-illustration.svg");
+}
+
+.advantages__item--price {
+    display: none;
+
+    background-image: url("../img/advantage-3-illustration.svg");
+}
+
+.advantages__title {
+    margin-bottom: 15px;
+
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.slider__toggles {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    width: 76px;
+
+    bottom: 12px;
+    left: 50%;
+    margin-left: -38px;
+}
+
+.slider__toggle {
+    width: 7px;
+    height: 7px;
+
+    font-size: 0;
+
+    transform: rotate(45deg);
+    transition: background-color .2s linear;
+
+    background-color: transparent;
+    border: 1px solid #fff;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+.slider__input {
+    display: none;
+}
+
+.slider__input:nth-of-type(1):checked~.slider__list .advantages__item--fast {
+    display: block;
+}
+.slider__input:nth-of-type(2):checked~.slider__list .advantages__item--cool {
+    display: block;
+}
+.slider__input:nth-of-type(3):checked~.slider__list .advantages__item--price {
+    display: block;
+}
+
+.slider__input:nth-of-type(1):checked~.slider__toggles .slider__toggle:nth-child(1) {
+    background-color: #fff;
+}
+
+.slider__input:nth-of-type(2):checked~.slider__toggles .slider__toggle:nth-child(2) {
+    background-color: #fff;
+}
+
+.slider__input:nth-of-type(3):checked~.slider__toggles .slider__toggle:nth-child(3) {
+    background-color: #fff;
+}
+
+@media (min-width: @tablet-width) {
+    .advantages {
+        height: auto;
+
+        background-color: #353535;
+
+        input, 
+        .slider__toggles {
+            display: none;
+        }
+
+        &::after {
+            height: 45px;
+
+            background: url("../img/corner-light-dark.svg") no-repeat;
+        }
+    }
+
+    .advantages__wrapper {
+        width: 640px;
+
+        margin: 0 auto;
+    }
+
+    .advantages__list {
+        display: flex;
+        flex-direction: column;
+        
+        height: auto;
+    }
+
+    .advantages__item {
+        display: block;
+        position: static;
+
+        height: 175px;
+
+        padding: 0;
+        padding-top: 45px;
+        padding-left: 160px;
+        padding-right: 35px;
+
+        text-align: left;
+
+        background-color: #353535;
+        background-position: 30px 45px;
+
+        border-bottom: 1px solid #494949;
+
+        &:last-child {
+            height: 185px;
+
+            border-bottom: none;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .advantages {
+        padding-top: 80px;
+
+        &::after {
+            height: 65px;
+        }
+    }
+
+    .advantages__wrapper {
+        width: 960px;
+
+        margin: 0 auto;
+    }
+
+    .advantages__list {
+        flex-direction: row;
+        background-color: #353535;
+
+        padding-bottom: 40px;
+    }
+
+    .advantages__item {
+        height: auto;
+        width: 320px;
+
+        padding: 0;
+        padding-top: 130px;
+        padding-right: 45px;
+        padding-left: 45px;
+
+        text-align: center;
+
+        background-position: 110px 0px;
+
+        border-bottom: none;
+        border-right: 1px solid #494949;
+
+        &:last-child {
+            height: auto;
+
+            border-right: none;
+        }
+    }
+}

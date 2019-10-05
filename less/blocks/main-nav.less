@@ -1,0 +1,252 @@
+.main-nav {
+    position: relative;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-nav__toggle {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 70px;
+    height: 50px;
+
+    padding: 16px;
+
+    font-size: 0;
+    outline: none;
+    border: none;
+
+    background-color: #6a4d38;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: #624530;
+    }
+
+    &:active .cls-1 {
+        fill: #917d6f;
+    }
+}
+
+.main-nav__list {
+    .reset-list();
+}
+
+.site-list {
+    font-weight: 700;
+}
+
+.site-list__item a,
+.user-list__item a {
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+
+    background-color: #826550;
+    border-top: 1px solid #886e5b;
+    border-bottom: 1px solid #71543f;
+
+    transition: background-color .2s linear,border-color .2s linear,color .2s linear;
+
+
+    box-sizing: border-box;
+}
+
+.user-list__item a {
+    background-color: #6a4d38;
+}
+
+.site-list__item a {
+    &:hover,
+    &:focus {
+        background-color: #755a46;
+    }
+
+    &:active {
+        color: #a09187;
+        background-color: #6a4d38;
+    }
+}
+
+.user-list__login {
+    position: relative;
+
+    background-color: #6a4d38;
+    border: none;
+
+    &:active {
+        color: #a09187;
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+
+        top: 17px;
+        left: 110px;
+
+        width: 16px;
+        height: 16px;
+
+        background: url("../img/login.png") no-repeat;
+
+        opacity: 0.3;
+    }
+}
+
+
+@media (min-width: @tablet-width) {
+    .main-nav__toggle {
+        display: none;
+    }
+
+    .main-nav {
+        width: auto;
+        margin: 0;
+
+        background-color: #000000;
+    }
+
+    .main-nav__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        width: 640px;
+        margin: 0 auto;
+    }
+
+    .site-list {
+        display: flex;
+        justify-content: space-between;
+
+        width: 570px;
+        height: 100%;
+
+        box-sizing: border-box;
+
+        .site-list__item--active {
+            border-bottom: 3px solid #826550;
+            margin-bottom: -2px;
+        }
+    }
+
+    .user-list {
+        width: 60px;
+        height: 100%;
+    }
+
+    .site-list__item a,
+    .user-list__item a {
+        height: 100%;
+        
+        line-height: 72px;
+
+        background-color: inherit;
+        border: none;
+
+        box-sizing: border-box;
+    }
+
+    .site-list__item a {
+        &:hover,
+        &:focus {
+            color: #826550;
+            background-color: inherit;
+        }
+
+        &:active {
+            color: #4c4c4c;
+        }
+    }
+
+    .user-list__login {
+        font-size: 0;
+
+        &::before {
+            left: 22px;
+            top: 29px;
+        }
+
+        &:hover::before,
+        &:focus::before {
+            background-image: url("../img/login-tablet-hover.png");
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .main-nav__wrapper {
+        width: 960px;
+    }
+
+    .site-list {
+        width: 780px;
+    }
+
+    .user-list {
+        width: 160px;
+
+        margin-left: auto;
+    }
+
+    .site-list__item {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 1px;
+        }
+    }
+
+    .user-list__item {
+        width: 129px;
+
+        margin-left: auto;
+    }
+
+    .user-list__login {
+        font-size: 18px;
+
+        padding-left: 45px;
+
+        &::before {
+            left: 27px;
+        }
+
+        &:hover::before,
+        &:focus::before {
+            background-image: url("../img/login-desktop-hover.png");
+            opacity: 1;
+        }
+
+        &:active::before {
+            opacity: 0.1;
+        }
+    }
+
+    .main-nav__list a {
+        font-weight: 700;
+        &:hover,
+        &:focus {
+            color: #000000;
+
+            background-color: #ffffff;
+        }
+
+        &:active {
+            color: #b2b2b2;
+        }
+    }
+
+}

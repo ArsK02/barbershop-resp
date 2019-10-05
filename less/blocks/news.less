@@ -1,0 +1,126 @@
+.news {
+    padding-top: 35px;
+    padding-bottom: 25px;
+    margin-top: -1px;
+
+    color: #000000;
+
+    background-color: #f8f5f2;
+
+    border-bottom: 1px solid #e5ddd5;
+}
+
+.news__wrapper {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.news__title {
+    margin-bottom: 35px;
+
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.news__list {
+    .reset-list()
+}
+
+.news__item {
+    display: flex;
+
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #e5ddd5;
+
+    &:last-child {
+        margin-bottom: 0;
+
+        border: none;
+    }
+}
+
+.news__date {
+    position: relative;
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    margin: 12px 20px 0 0;
+    padding: 10px 13px 3px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+    text-align: center;
+    text-transform: lowercase;
+
+    background-color: #000;
+    transition: background-color .1s linear,color .2s linear;
+
+    box-sizing: border-box;
+
+    .news__day {
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+    &::after {
+        content: "";
+
+        position: absolute;
+
+        width: 0;
+        height: 0;
+
+        bottom: -10px;
+        left: 0;
+
+        border: 10px solid transparent;
+        border-top-color: #000;
+        border-right-width: 25px;
+        border-bottom: none;
+        border-left-width: 25px;
+        transition: border-color .1s linear;
+    }
+}
+
+.news__to-all {
+    display: block;
+
+    width: 280px;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0 auto;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    border: 1px solid #e5ddd5;
+
+    box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+    .news {
+        padding-top: 45px;
+        margin: 0;
+    }
+    
+}
+
+@media (min-width: @desktop-width) {
+    .news {
+        padding-top: 65px;
+    }
+}
