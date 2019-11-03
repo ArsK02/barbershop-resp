@@ -1,0 +1,54 @@
+.works {
+    position: relative;
+
+    padding-bottom: 35px;
+    margin-bottom: 1px;
+}
+
+.works::after {
+    content: "";
+
+    display: block;
+
+    position: absolute;
+
+    left: 0;
+    bottom: -34px;
+
+    height: 34px;
+    width: 100%;
+
+    background: url(../img/corner-light.svg) no-repeat;
+    
+    transform: rotate(180deg);
+}
+
+@media (min-width: @tablet-width) {
+    .works {
+        padding: 0 64px;
+        padding-bottom: 60px;
+    }
+
+    .works::after {
+        bottom: -40px;
+        left: 0;
+
+        height: 40px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .works {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  
+      width: 960px;
+      margin: 0 auto;
+      padding-bottom: 47px;
+    }
+  
+    .works::after {
+      display: none;
+    }
+}

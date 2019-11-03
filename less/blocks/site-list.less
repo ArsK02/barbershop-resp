@@ -1,0 +1,115 @@
+.site-list {
+    .reset-list();
+
+    font-weight: 700;
+}
+
+.site-list__item a {
+    display: block;
+    height: 50px;
+    width: 100%;
+
+    padding-left: 20px;
+
+    line-height: 50px;
+    text-transform: uppercase;
+
+    background-color: #826550;
+    border-top: 1px solid #886e5b;
+    border-bottom: 1px solid #71543f;
+
+    transition: background-color .2s linear,border-color .2s linear,color .2s linear;
+
+    box-sizing: border-box;
+}
+
+.site-list a[href] {
+    &:hover {
+        background-color: #755a46;
+        border-top-color: #755a46;
+    }
+
+    &:active {
+        color: rgba(255, 255, 255, 0.3);
+        background-color: #6a4d38;
+        border-top-color: #6a4d38;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .site-list {
+        display: flex;
+        justify-content: space-around;
+        flex-grow: 1;
+
+        width: 570px;
+        height: 100%;
+
+        box-sizing: border-box;
+
+        .site-list__item--active {
+            border-bottom: 3px solid #826550;
+            margin-bottom: -2px;
+        }
+    }
+
+    .site-list__item a {
+        height: 100%;
+
+        padding: 0;
+        
+        line-height: 72px;
+        text-align: center;
+
+        background-color: inherit;
+        border: none;
+
+        box-sizing: border-box;
+    }
+
+    .site-list__item a,
+    .site-list__item a[href] {
+        &:hover,
+        &:focus {
+            color: #826550;
+            background-color: inherit;
+        }
+
+        &:active {
+            color: #4c4c4c;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .site-list {
+        width: 780px;
+    }
+
+    .site-list__item {
+        width: auto;
+
+        font-weight: 700;
+
+        &:not(:last-child) {
+            margin-right: 1px;
+        }
+    }
+
+    .site-list__item a,
+    .site-list__item a[href] {
+        padding-left: 32px;
+        padding-right: 32px;
+
+        &:hover,
+        &:focus {
+            color: #000000;
+
+            background-color: #ffffff;
+        }
+
+        &:active {
+            color: #b2b2b2;
+        }
+    }
+}

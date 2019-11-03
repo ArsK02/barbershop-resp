@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BarberShop</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic"
-        rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,33 +17,15 @@
                 <source srcset="img/logotype-desktop.svg" media="(min-width: 1200px)">
                 <source srcset="img/logotype-tablet.svg" media="(min-width: 768px) and (max-width: 1999px)">
                 <source srcset="img/logotype-mobile.svg" media="(max-width: 767px)">
-                <img class="page-header__logo-image" src="img/logotype-desktop.svg" alt="Барбершоп 'Бородинский'">
+                <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп 'Бородинский'">
             </picture>
         </div>
-        <nav class="main-nav">
-            <button class="main-nav__toggle" type="button">
-                Открыть меню
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.93 19.95">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                                fill: #fff;
-                            }
-                        </style>
-                    </defs>
-                    <title>Artboard 1</title>
-                    <path class="cls-1"
-                        d="M0,10a1.07,1.07,0,0,0,1.13,1H34.8a1.07,1.07,0,0,0,1.13-1,1.07,1.07,0,0,0-1.13-1H1.13A1.07,1.07,0,0,0,0,10Z" />
-                    <path class="cls-1"
-                        d="M1.13,0A1.07,1.07,0,0,0,0,1,1.07,1.07,0,0,0,1.13,2H34.8a1.07,1.07,0,0,0,1.13-1A1.07,1.07,0,0,0,34.8,0Z" />
-                    <path class="cls-1"
-                        d="M0,19a1.07,1.07,0,0,0,1.13,1H34.8a1,1,0,1,0,0-2H1.13A1.07,1.07,0,0,0,0,19Z" />
-                </svg>
-            </button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list site-list">
                     <li class="site-list__item site-list__item--active">
-                        <a href="#">Главная</a>
+                        <a>Главная</a>
                     </li>
                     <li class="site-list__item">
                         <a href="photo.html">Наши работы</a>
@@ -77,13 +57,14 @@
             <div class="stats__wrapper">
                 <header class="stats__header">
                     <h2 class="visually-hidden">Статистика Барбершопа</h2>
-                    <p class="stats__slogan"><b>Стрижка у нас это выгодно!</b></p>
+                    <p class="stats__slogan"><b>Стрижка у нас<br> это выгодно!</b></p>
                     <p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
                     <small class="stats__legend stats__legend--top">
                         <sup>*</sup> — приведённые данные ложь
                     </small>
                 </header>
                 <table class="stats__list">
+                    <tbody>
                     <tr>
                         <td class="stats__value">
                             1 500<sup>*</sup>
@@ -116,6 +97,7 @@
                             лайков и комплиментов
                         </td>
                     </tr>
+                    </tbody>
                 </table>
                 <small class="stats__legend stats__legend--bottom">
                     <sup>*</sup> — приведённые данные ложь
@@ -167,34 +149,42 @@
                 <h2 class="news__title">Новости и акции</h2>
                 <ul class="news__list">
                     <li class="news__item">
-                        <time class="news__date" datetime="2019-09-29">
-                            <b class="news__day">29</b>
-                            сент
-                        </time>
-                        <p class="news__text">
-                            Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время
-                            стрижки.
-                        </p>
+                        <a class="news__link" href="#">
+                            <time class="news__date" datetime="2019-09-29">
+                                <b class="news__day">29</b>
+                                сент
+                            </time>
+                            <p class="news__text">
+                                Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время
+                                стрижки.
+                            </p>
+                        </a>
                     </li>
                     <li class="news__item">
-                        <time class="news__date" datetime="2019-09-19">
-                            <b class="news__day">19</b>
-                            сент
-                        </time>
-                        <p class="news__text">
-                            В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите
-                            записаться!
-                        </p>
+                        <a class="news__link" href="#">
+                            <time class="news__date" datetime="2019-09-19">
+                                <b class="news__day">19</b>
+                                сент
+                            </time>
+                            <p class="news__text">
+                                В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды.
+                                Спешите
+                                записаться!
+                            </p>
+                        </a>
                     </li>
                     <li class="news__item">
-                        <time class="news__date" datetime="2019-09-09">
-                            <b class="news__day">9</b>
-                            сент
-                        </time>
-                        <p class="news__text">
-                            Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь
-                            подвох!
-                        </p>
+                        <a class="news__link" href="#">
+                            <time class="news__date" datetime="2019-09-09">
+                                <b class="news__day">9</b>
+                                сент
+                            </time>
+                            <p class="news__text">
+                                Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем
+                                здесь
+                                подвох!
+                            </p>
+                        </a>
                     </li>
                 </ul>
                 <a class="news__to-all button" href="#">показать все</a>
@@ -204,39 +194,45 @@
         <section class="reviews">
             <div class="reviews__wrapper slider">
                 <h2 class="reviews__title">Отзывы о нас</h2>
+                <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
+                <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
+                <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
                 <a class="reviews__write button" href="#">Оставить свой</a>
                 <div class="reviews__list slider__list">
                     <blockquote class="reviews__item slider__item">
                         <p class="reviews__author-picture">
-                            <img class="reviews__author-image" src="img/picture-travis.jpg" width="50" height="33"
-                                alt="Фото Трэвиса Баркера">
+                            <img class="reviews__author-image" src="img/picture-travis.jpg" srcset="img/picture-travis@2x.jpg 2x" alt="Фото Трэвиса Баркера">
                         </p>
-                        <cite class="reviews__author-name">Трэвис Баркер</cite>
-                        <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться!</p>
+                        <div class="reviews__author-massage">
+                            <cite class="reviews__author-name">Трэвис Баркер</cite>
+                            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться!</p>
+                        </div>
                     </blockquote>
                     <blockquote class="reviews__item slider__item">
                         <p class="reviews__author-picture">
-                            <img class="reviews__author-image" src="img/picture-travis.jpg" width="50" height="33"
-                                alt="Фото Трэвиса Баркера">
+                            <img class="reviews__author-image" src="img/picture-travis.jpg" srcset="img/picture-travis@2x.jpg 2x" alt="Фото Трэвиса Баркера">
                         </p>
-                        <cite class="reviews__author-name">Трэвис Баркер</cite>
-                        <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
+                        <div class="reviews__author-massage">
+                            <cite class="reviews__author-name">Трэвис Баркер</cite>
+                            <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
+                        </div>
                     </blockquote>
                     <blockquote class="reviews__item slider__item">
                         <p class="reviews__author-picture">
-                            <img class="reviews__author-image" src="img/picture-travis.jpg" width="50" height="33"
-                                alt="Фото Трэвиса Баркера">
+                            <img class="reviews__author-image" src="img/picture-travis.jpg" srcset="img/picture-travis@2x.jpg 2x" alt="Фото Трэвиса Баркера">
                         </p>
-                        <cite class="reviews__author-name">Трэвис Баркер</cite>
-                        <p class="reviews__text">В Бородинском ваша борода в надежных руках!</p>
+                        <div class="reviews__author-massage">
+                            <cite class="reviews__author-name">Трэвис Баркер</cite>
+                            <p class="reviews__text">В Бородинском ваша борода в надежных руках!</p>
+                        </div>
                     </blockquote>
                     <button class="reviews__prev" type="button">Предыдущий отзыв</button>
                     <button class="reviews__next" type="button">Следующий отзыв</button>
                 </div>
                 <p class="reviews__toggles slider__toggles">
-                    <button class="slider__toggle" type="button">1</button>
-                    <button class="slider__toggle" type="button">2</button>
-                    <button class="slider__toggle" type="button">3</button>
+                    <label class="reviews__toggle slider__toggle" for="reviews-input-1">1</label>
+                    <label class="reviews__toggle slider__toggle" for="reviews-input-2">2</label>
+                    <label class="reviews__toggle slider__toggle" for="reviews-input-3">3</label>
                 </p>
             </div>
         </section>
@@ -277,6 +273,7 @@
         </div>
     </footer>
 
+    <script src="js/main-nav.js"></script>
 </body>
 
 </html>

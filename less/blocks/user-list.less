@@ -1,0 +1,127 @@
+.user-list {
+    .reset-list();
+}
+
+.user-list__item a {
+    display: block;
+    height: 50px;
+    width: 100%;
+
+    padding-left: 50px;
+
+    line-height: 50px;
+    text-transform: uppercase;
+
+    background-color: #6a4d38;
+    border-top: 1px solid #886e5b;
+    border-bottom: 1px solid #71543f;
+
+    transition: background-color .2s linear,border-color .2s linear,color .2s linear;
+
+    box-sizing: border-box;
+}
+
+.user-list__login {
+    position: relative;
+
+    background-color: #6a4d38;
+    border: none;
+
+    &:active {
+        color: #a09187;
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+
+        top: 17px;
+        left: 20px;
+
+        width: 16px;
+        height: 16px;
+
+        background: url("../img/login.png") no-repeat;
+
+        opacity: 0.3;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .user-list {
+        width: 60px;
+        height: 100%;
+    }
+
+    .user-list__item a {
+        height: 100%;
+        
+        line-height: 72px;
+
+        background-color: inherit;
+        border: none;
+
+        box-sizing: border-box;
+    }
+
+    .user-list__login {
+        font-size: 0;
+
+        &::before {
+            left: 22px;
+            top: 29px;
+        }
+
+        &:hover::before,
+        &:focus::before {
+            background-image: url("../img/login-tablet-hover.png");
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .user-list {
+        width: 160px;
+
+        margin-left: auto;
+    }
+
+    .user-list__item {
+        width: 129px;
+
+        font-weight: 700;
+
+        margin-left: auto;
+    }
+
+    .user-list__login {
+        font-size: 18px;
+
+        padding-left: 45px;
+
+        &:hover::before,
+        &:focus::before {
+            background-image: url("../img/login-desktop-hover.png");
+            opacity: 1;
+        }
+
+        &:active::before {
+            opacity: 0.1;
+        }
+    }
+
+    .user-list__item a {
+        &:hover,
+        &:focus {
+            color: #000000;
+
+            background-color: #ffffff;
+        }
+
+        &:active {
+            color: #b2b2b2;
+        }
+    }
+}
